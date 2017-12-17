@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>D:\HKUSTLearn\BigReview\Computer-Science\Tools\Study_Monitor\out\artifacts\Study_Monitor_jar\Study_Monitor.jar</jar>
+  <outfile>C:\Users\xzhua\Desktop\Study_monitor.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>true</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\xzhua\Desktop\icon-study-icon.ico</icon>
+  <singleInstance>
+    <mutexName>Only One are allowed to run</mutexName>
+    <windowTitle>Error</windowTitle>
+  </singleInstance>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.1.0</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.0</fileVersion>
+    <txtFileVersion>1.20.RC1</txtFileVersion>
+    <fileDescription>A program which helps you monitor your daily study/work time</fileDescription>
+    <copyright>ZHU Xinyu HKUST</copyright>
+    <productVersion>1.0.0.0</productVersion>
+    <txtProductVersion>1.20.RC1</txtProductVersion>
+    <productName>Study_Monitor</productName>
+    <companyName>HKUST</companyName>
+    <internalName>HKUST</internalName>
+    <originalFilename>Study_Monitor.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+</launch4jConfig>
