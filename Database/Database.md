@@ -39,8 +39,10 @@ Logical Data independence: Logical || View
 ![](https://i.imgur.com/HlsYJXJ.png)
 
 ## Entity Relationship (ER) Model
-![](./controllers_brief.svg)
-<img src="./ER+Diagram.svg">
+
+[![](https://i.imgur.com/S57FvXV.png)](http://naotu.baidu.com/file/3a27ac4e01e12769373c629144d22bb5?token=388d9290d2869238)
+
+
 
 
 ## Relational Model, Algebra
