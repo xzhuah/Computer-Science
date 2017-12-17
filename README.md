@@ -61,3 +61,13 @@ I decided to challenge myself by setting a tough study schedule. From now (2017/
 
 Ladies and gentlemen, let's Improve together!
 
+## Tools Used
+
+In order to improve my working efficiency, I will make use of different kind of tools to achieve specific tasks. Here I will maintain a list of those excellent tools here and hope that will help you too.
+
+1. [MarkdownPad 2](http://markdownpad.com/): An editor for Markdown language. I used it to edit most of the .md files 
+1. [Study_monitor](https://github.com/xzhuah/Computer-Science/tree/master/Tools/Study_Monitor/out/artifacts/Study_Monitor_jar): a simple program helps you record study time and make study plan and summary.
+1. [百度脑图](http://naotu.baidu.com/): an online website helps you to make tree diagram to summerize knowledge
+1. [Imgur](https://imgur.com/): a free online public image storage center. You can upload your image there and make it public.
+1. [draw.io](https://www.draw.io/): a free online diagram editing tool. You can create your diagrams with it easily
+
