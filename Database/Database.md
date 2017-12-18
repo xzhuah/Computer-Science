@@ -118,7 +118,7 @@ Test for Duplicate Tuples
 
 Division in SQL
 
-Find all customers with an account at all branches located in Brooklyn.
+Find all customers with an account at all branches located in Brooklyn.
 
 	select distinct S.customer-name
 	from depositor as S

@@ -71,3 +71,9 @@ In order to improve my working efficiency, I will make use of different kind of 
 1. [Imgur](https://imgur.com/): a free online public image storage center. You can upload your image there and make it public.
 1. [draw.io](https://www.draw.io/): a free online diagram editing tool. You can create your diagrams with it easily
 
+
+## Bitcoin donations
+
+3LDCkUA9hyMgqX5c8FJY4EVy1Mpem4Vjf4
+
+
