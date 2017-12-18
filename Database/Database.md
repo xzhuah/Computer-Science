@@ -45,6 +45,9 @@ Logical Data independence: Logical || View
 
 
 
+
+
+
 ## Relational Model, Algebra
 ## SQL
 ## Functional Dependencies and Relational Database Design
@@ -56,5 +59,6 @@ Logical Data independence: Logical || View
 ## Transactions
 ## Concurrency Control Protocols
 ## Database Recovery 
+
 
 
