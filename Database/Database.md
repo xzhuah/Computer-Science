@@ -49,6 +49,13 @@ Logical Data independence: Logical || View
 
 
 ## Relational Model, Algebra
+### Relational Model
+[![](https://i.imgur.com/w1MC76o.png)](http://naotu.baidu.com/file/72ac0b2eb7d919fd2532e771088c6aa0?token=16f00c838c888e51)
+
+
+### Relational Algebra
+[![](https://i.imgur.com/RcLQhca.png)](http://naotu.baidu.com/file/d80d0785dee5f62e1801e589c9b5a62f?token=27faaf467d6b5506)
+
 ## SQL
 ## Functional Dependencies and Relational Database Design
 ## Storage and File Systems
