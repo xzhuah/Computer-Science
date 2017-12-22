@@ -205,8 +205,8 @@ Writing SQL for complex query is not an easy task. Need more practice.
 
 
 ### How to define integrity constraints
-
-![](https://i.imgur.com/rfGTcHF.png)
+[
+![](https://i.imgur.com/rfGTcHF.png)](http://naotu.baidu.com/file/125c3c198e6a6bba9da9617563ff3ea1?token=4a34f3bf6aea43db)
 
 	CREATE TABLE  Department(
 	   did  INTEGER,
@@ -263,9 +263,72 @@ Please refer to [this](https://www.rose-hulman.edu/class/csse/csse333/Slides/Tri
 
 ## Functional Dependencies and Relational Database Design
 
-### Functional Dependencies
+### Functional Dependencies (FD)
+
+A functional dependency from X to Y : X → Y : attribute set X determines attribute set Y 
+
+FD and Keys
+
+<table>
+
+<tr><th>Key 	Type</th><th>Function</th></tr>
+<tr><td>Superkey</td><td>determines the entire tuple</td></tr>
+<tr><td>candidate key(n)</td><td>A minimal set of attributes that determines the entire tuple </td></tr>
+<tr><td>primary key</td><td>One of candidate key</td></tr>
+
+</table>
+
+a set of functional dependencies F can impley a set of other FD:
+A→B, B→C ▶ A→C, A→(B,C)
+
+The set of all FD logically implied by F is the **closure of F**: F<sup>+</sup>
+
+####Armstrong’s Axioms
+1. if Y is a subset of X, then X → Y (reflexivity)
+2. if X → Y, then ZX → ZY (augmentation)
+3. if X → Y and Y→ Z, then X → Z (transitivity)
+
+####Addtional Rules:
+1. If X → Y holds and X→Z holds, then X → YZ holds (union)
+1. If X → YZ holds, then X→→ Y holds and X → Z holds (decomposition)
+1. If X → Y holds and ZY→W holds, then ZX→W holds (pseudotransitivity)
+
+#### Closure of Attribute Sets
+X<sup>+</sup>: the set of attributes that are determined by X under F
+
+#### Canonical Cover
+Canonical Cover of F: F<sub>c</sub>, containing no redundancy
+	
+	repeat
+		Use the union rule to replace any dependencies in F
+			 X1 → Y1 and X1 → Y2 with X1 → Y1 Y2
+		Find a functional dependency X → Y with an extraneous attribute either in X 	 or in Y 
+		If an extraneous attribute is found, delete it from X → Y 
+	until F does not change
+
+![](https://i.imgur.com/EmaKJaA.png)
+
+
 
 ### Relational Database Design – 3NF
+
+####Normalization: decomposing a relation schema R into fragments 
+* Lossless decomposition
+	* R → R1 and R2, the common attributes of R1 and R2 must be a super key for R1 or R2
+* Dependency preservation
+	* (∪ Fi)<sup>+</sup> = F<sup>+</sup> 
+* Good form (little redundancy)
+	* 1NF, 2NF, 3NF, BCNF
+
+##### 2NF
+
+	for each FD: X → {A} in F+:
+		A ∈ X (the FD is trivial) OR
+		X is not a proper subset of a candidate key for R, OR
+		A is a prime attribute 
+
+
+
 
 ### Relational Database Design – BCNF
 
