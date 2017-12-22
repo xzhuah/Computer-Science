@@ -131,13 +131,144 @@ Find all customers with an account at all branches located in Brooklyn.
 		from depositor as T, account as R
 		where T.account-number = R.account-number and S.customer-name = T.customer-name))
 ![](https://i.imgur.com/gEpyOXa.png)
+
+###Aggregate Functions:
+	
+	avg(balance) % average value of that column
+	min
+	max
+	sum
+	count(balance) % number of row in that column
+
+###Group By
+
+	select branch-name, count([distinct] account-number)
+	from account
+	group by branch-name
+
+![](https://i.imgur.com/I3i55mM.png)
+
+* Attributes in select clause outside of aggregate functions must appear in group by list.
+* You seperate the table according to the attributes in group by into serveral groups, then for each group, you apply the aggregate functions. 
+* having can be used to filter the groups:
+
+		having avg(balance)>700
+	* having clause should be after where clause
+
+### Derived Relations
+
+In order to do some complex query, you may need a temp relation to help you
+
+	select branch-name
+	from(
+		select branch-name, avg(balance)
+		from account
+		group by branch-name
+		) as result(branch-name,avg-balance)
+		
+	where avg-balance = 
+		(select max(avg-balance)
+		from result)
+
+
+
+
 Writing SQL for complex query is not an easy task. Need more practice.
 
+## DDL: Data Definition Language
 
 
+
+<table>
+<caption>Domain Types in SQL</caption>
+<tr><th>Type</th><th>Meaning</th></tr>
+<tr><td>char(n)</td><td>fixed length string</td></tr>
+<tr><td>varchar(n)</td><td>variable length string, maximum n</td></tr>
+<tr><td>int</td><td>integer</td></tr>
+<tr><td>smallint</td><td>defined by system</td></tr>
+<tr><td>Numeric(p,d)</td><td>fixed point number, p digits precision with d digits on the right of decimal point</td></tr>
+<tr><td>real,double</td><td>defined by system</td></tr>
+<tr><td>float(n)</td><td>n digits precision float</td></tr>
+<tr><td>date</td><td>year-month-date</td></tr>
+<tr><td>time</td><td>hour-min-sec</td></tr>
+</table>
+
+### Create Table Example
+	
+	CREATE TABLE Students
+	( 	sid: CHAR(20),
+		name: CHAR(20),
+		login: CHAR(10),
+		age: INT,
+		gpa: REAL
+	)
+
+
+### How to define integrity constraints
+
+![](https://i.imgur.com/rfGTcHF.png)
+
+	CREATE TABLE  Department(
+	   did  INTEGER,
+	   dname  CHAR(20),
+	   budget  REAL,
+	   HKID  CHAR(11) NOT NULL,
+
+	   PRIMARY KEY  (did),
+	   UNIQUE(dname,budget) % candidate key
+	   FOREIGN KEY  (HKID) REFERENCES Employees,ON DELETE NO ACTION/CASCADE,      
+	   check(dname in ("CS", "MATH"))
+	   check(budget>20)
+	   )
+
+	* No action: won't delete when delete
+	* CASCADE: if the foreign key is deleted from the foreign table, also delete the record in this table
+
+
+### Destroying and Altering Relations
+	
+	DROP TABLE Students
+
+	ALTER TABLE Students
+		ADD COLUMN firstYear: integer
+
+### Record Deletion/ Insertion / update
+	
+	delete from account
+	where branch-name = "Perryridge"
+
+	insert into account(col1,col2) values(value1,value2)
+	
+	insert into account select v1,v2 from loan where ...
+
+	update account
+	set balance = balance * 1.06
+	where balance>1000
+
+
+	update account
+	set balance=case
+					when balance<=1000
+					then balance * 1.05
+					else balance*1.06
+				end
+
+
+
+	
+### Assetions and Trigger are very powerful but seldom used and they are quite complex
+
+Please refer to [this](https://www.rose-hulman.edu/class/csse/csse333/Slides/Triggers.pdf)
 
 
 ## Functional Dependencies and Relational Database Design
+
+### Functional Dependencies
+
+### Relational Database Design – 3NF
+
+### Relational Database Design – BCNF
+
 ## Storage and File Systems
 ## Tree and Hash Indexes
 ## Query Processing
@@ -146,6 +277,10 @@ Writing SQL for complex query is not an easy task. Need more practice.
 ## Transactions
 ## Concurrency Control Protocols
 ## Database Recovery 
+
+##Other learning Resource:
+
+There is a Chinese passage [here](http://blog.jobbole.com/100349/) which is a very good summary for techniques in relational database. Hope you enjoy it.
 
 
 
