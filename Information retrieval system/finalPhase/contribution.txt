@@ -1,0 +1,65 @@
+
+20176398, CHEN Shaoyu, 25%, 
+
+Review code and fix bugs. 
+
+Design the architecture and the modules of the program. 
+
+Write the document. Performance analysis and optimization.
+
+
+20176544, CHEN Taiyou, 25%, 
+
+Review code and fix bugs. 
+
+Design and implement the algorithm to handle phrase search, ie., given a phrase, which a vector of words, the module can recognize and count the occurrence of phrase in documents using inverted index file, and provide the output of a mapping from docID to tf of the phrase.
+
+	
+20177598, SHANG Hang, 25%,
+
+implement the vector space algorithm for the project. 
+
+Integrete the phrase search,query search, page rank interact with the front end to provide top N search results. 
+
+Refine model to improve efficiency and speed.  
+
+Fix some bugs for different parts. 
+
+	
+20256148, ZHU Xinyu, 25%,
+
+Upgrade spider program by enabling it to sense word position.
+
+Implement InvertedFile (including invertedIndex and ForwardIndex)
+
+User-Friendly Font Page Design and Implementation
+
+	jsp server and jsp files. 
+
+	html file ,css files and javascript functions
+
+	implement jquery in font page
+
+Functions in the user interface:
+
+	similar page search.
+
+	allow user to select among a list of keywords*.
+
+	Generate page profile dynamically to the user. 
+
+	Preprocess the user input and pass it to the background program.
+
+A user-friendly interface for the spider program which Spider.jar(double click to run it). 
+
+PageRank Computation.
+
+Debug and optimize some other parts of the program.
+
+	Deal with null point problems in PhraseSearch and VectorSpace
+
+	Add window size in phrase search so that it can find those phrase containing a few stopwords
+
+
+
+* we can but didn¡¯t show all the keywords in the database because there are too many.We dynamically select some popular keywords from the database and construct the list.

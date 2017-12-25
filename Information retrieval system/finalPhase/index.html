@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>COMP 4321 Search Engine</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> <!-- JQuery-->
+<script src="./js/color.js" charset="utf-8"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<link rel="icon" href="./img/searchIcon.png" type="image/x-icon">
+</head>
+
+
+
+<body>
+<!-- animation-->
+<div class="back_animation">
+<canvas width="1400" height="300" id="particles" ></canvas>
+</div>
+
+<!-- navigation bar -->
+<header>
+    <nav>
+        <div align="right" class="navBar">
+        <a href="#" class="navButton"><img class="navImage" src="./img/ask.png" width="30px" title="Help"/></a>
+        <a href="#" class="navButton"><img class="navImage" src="./img/tool.png" width="30px" title="Tools"/></a>
+        <a href="#" class="navButton"><img class="navImage" src="./img/menu.png" width="30px" title="Menu"/></a>
+        <a href="#" class="myButton2">Sign In</a>
+        </div>
+    </nav>
+</header>
+
+
+<!-- logo -->
+<div style="" class="logo_div">
+<img src="./img/search.png" width="500" class="logo"/>
+</div>
+
+<!-- search area-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center">
+<div class="main">
+<form method="get" action="search.jsp">
+<input type="text" name="search" placeholder=" Search " class="form-control" aria-label="..." id="storytitle" style="color:#003; height:40px; font-size:20px" spellcheck="true" autofocus="autofocus" autocomplete="on"/>
+ <br>
+ <input type="checkbox" name="detail" value="true" class="check"><span class="checkBox">Show Statistics</span>
+ <button type="submit" class="myButton">Quick Search</button>
+ 
+ </form>  
+</div></td>
+  </tr>
+</table>
+
+
+         
+
+<!-- footer -->
+<footer>
+<div class="bottomBar">
+<a class="bottomLink" href="#">Project</a>
+<a class="bottomLink" href="#">Team</a>
+<a class="bottomLink" href="#">About</a>
+</div>
+</footer>
+<script src="./js/background.js" charset="utf-8"></script>	
+</body>
+</html>

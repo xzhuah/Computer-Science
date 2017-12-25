@@ -1,0 +1,9 @@
+table.poptable th{font-family:Arial; font-size:12px} /*Font*/
+table.poptable td{font-family:Arial; font-size:12px} /*Font*/
+table.poptable{border:0px solid #9AB; border-spacing:0px; /*border-collapse:collapse*/}
+table.poptable th{background-color:#CF9}/*Title Background*/
+							
+.popup .popupdetail{ display:none;  position:absolute;     border:1px solid #999;  background-color:#CF9;  padding:8px;  text-align:left; z-index:100}/*overall width*//*Overall background*/
+.popup:hover .popupdetail{ display:block}/*animation*/                 
+.popup .popupdetail th{ color:#33F;  white-space:nowrap;  text-align:center;  padding:4px;  vertical-align:top}/*--heading color*/		
+.popup .popupdetail td{ color:#39C}/*--content color*/
