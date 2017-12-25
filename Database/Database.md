@@ -325,12 +325,56 @@ Canonical Cover of F: F<sub>c</sub>, containing no redundancy
 	for each FD: X → {A} in F+:
 		A ∈ X (the FD is trivial) OR
 		X is not a proper subset of a candidate key for R, OR
-		A is a prime attribute 
+		A is a prime attribute (an attribute that is part of a candidate key)
+
+##### 3NF
+	
+	for each FD: X → {A} in F+:
+		A ∈ X (the FD is trivial) OR
+		X is a superkey for R, or
+		A is a prime attribute for R
+ * 3NF can still contain redundency, need to use null: [E→B, (B,C)→E]
+##### 3NF Decomposition Algorithm
+	Let R be the initial table with FDs F
+	Compute the canonical cover Fc of F
+	S=∅
+	for each FD X→Y in the canonical cover Fc
+		S=S∪(X,Y) 
+	if no schema contains a candidate key for R
+	 		Choose any candidate key K
+		S=S ∪ K
+
+
 
 
 
 
 ### Relational Database Design – BCNF
+
+	for each FD: X → {A} in F+,
+		A ∈ X (trivial FD), or
+		X is a superkey for R
+
+* BCNF has no redundency but may not preserve all dependencies
+
+#### Algorithhm:
+
+	Let R be the initial schema with FDs F
+	S={R}
+	Until all relation schemas in S are in BCNF
+	for each R in S 
+		for each FD X → Y that violates BCNF for R
+				S = (S – {R}) ∪ (R-Y) ∪ (X,Y)
+	enduntil
+
+	#########################
+	When we find a schema R with BCNF violation X → Y we:
+	1] Remove R from S
+	2] Add a schema that has the same attributes as R except for Y
+	3] Add a second schema that contains the attributes in X and Y
+
+
+
 
 ## Storage and File Systems
 ## Tree and Hash Indexes
