@@ -377,9 +377,107 @@ Canonical Cover of F: F<sub>c</sub>, containing no redundancy
 
 
 ## Storage and File Systems
+### Magnetic Disks
+
+Store and retrieved data in units called blocks / pages
+Slow
+
+### File Organization
+
+Database store data in files
+
+Each file contains a sequence of records
+
+- each file has only one type of record
+- each file is for one relation only
+- record are physically stored in block/page and one block contains records of same size
+
+Each record is a sequence of fields 
+
+Generally we can say
+[![](https://i.imgur.com/BqdM7b6.png)](http://naotu.baidu.com/file/4b29878bf0c807d5af53452a7b815364?token=f31f7e70cb5c0a3b)
+
+### How different kind of records are stored in file?
+
+[![](https://i.imgur.com/q4zVw07.png)](http://naotu.baidu.com/file/6b0395013e2a33625c934a676bdf0a3e?token=b2bf4ab2933b2636)
+
 ## Tree and Hash Indexes
+
+### Index
+
+* Primary index (clustering index): data file is sorted on search key of index
+* Secondary index (non-clustering index): when the file is not sorted on search key of index
+* Sparse index: contains index records for some search-key values only (only for primary index since the data files are themselves sorted)
+* Dense index: index that has an entry for every search key value
+
+### B+ Tree Index	
+
+#### Properties
+
+* Balanced: All path from root to leaf are of the same length
+* Each node has between ⌈n/2⌉ and n pointers
+* Each Leaf node stores between ⌈(n-1)/2⌉ and n-1 data values
+* n is called **fanout** and ⌈(n-1)/2⌉ is called the **order**
+* if the root is not a leaf, it has at least 2 children, otherwise it has between 0 and n-1 data value
+
+#### Leaf node:
+
+[![https://i.imgur.com/1jYyCM1.png](https://i.imgur.com/1jYyCM1.png)](https://i.imgur.com/1jYyCM1.png)
+
+#### Non-Leaf Node：
+
+![](https://i.imgur.com/5sjT1kL.png)
+
+
+#### Node relation:
+
+![](https://i.imgur.com/YMll8fx.png)
+
+
+#### Search for record with value k:
+
+Start with the root node
+
+1. If find an entry with key Kj = k, follow pointer Pj+1;
+1. Otherwise, if k < Km–1, follow pointer Pj, where Kj is the smallest search-key value > k;
+1. Otherwise, if k ≥ Km–1, follow Pm to the child node
+
+
+If the current tree node is not a leaf node
+
+1. repeat the above procedure on the node;
+1. follow the corresponding pointer
+
+Eventually reach a leaf node
+
+1. If find an entry with key Ki = k, follow pointer Pi  to the desired record(s);
+1. Else no record with key value k exists
+
+#### Insertion:
+
+Insert a data entry with search-key k
+
+1. Search the tree using k
+1. Find the correct leaf node L
+1. Insert data entry into L
+	1. If L has enough space, done!
+	1. Else, split L (into L and a new node L2)
+		1. Redistribute entries evenly, copy up middle key
+		1. Update the parent of L by insert index entry pointing to L2
+
+Updating can happen recursively
+
+* To split index node, redistribute entries evenly, but push up middle key
+
+Splits “grow” tree; root split increases height 
+
+* Tree growth: gets wider or one level taller at top
+
+[B+ Tree Animation](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html "B+ Tree Animation")
+
+
 ## Query Processing
-## Query Optimization
+## Query Optimization 
 ## Physical Database Design
 ## Transactions
 ## Concurrency Control Protocols
