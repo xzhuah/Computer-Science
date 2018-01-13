@@ -503,6 +503,33 @@ There are some smart way to do cheap re-organization like split the original buc
 
 depth mean the last n biary digit of the intergral it stores. when add 4, since 4 is 100 end with 00, we track the 00 pointer in the directory to the first bucket, but we find that it is already full, so we double the size of the directory and the 00 pointer now split into 2 pointers: 000 and 100 with depth 3, and re hash all the number in the origin 00 bucket to new bucket. We haven't change the depth of other bucket because they are not full so as you can see, 001 and 101 stil point to the same bucket.
 
+
+### Bitmap index
+
+for query on multiple keys that take only a small number of possible values
+
+how is bitmap index looks like?
+
+![](https://i.imgur.com/x48yLRD.png)
+
+On the left is the original record, and we maintain a bitmap index on the right.
+
+Since only record 0,3's gender is male, the bitmap for gender m is 1 0 0 1 0, the 0 and 3th position is set to one, the bitmap for gender f is 0 1 1 0 1 which tells us the record 1,2,4 has a gender f. For the income-level, there are five possible value so we maintain 5 bitmaps for each of them. The construction idea is similar to gender.
+
+Now if we want all record which is a male with income-level L1, we just interseact m and L1 index and ger 1 0 0 0 0 which tells us only the 0th record meet the query. 
+
+
+### Grid File
+
+A 2d grid file index looks something like this:
+
+![](https://i.imgur.com/Q9haqJ7.png)
+
+Grid file can have more than 2 dimensions. Each dimension represent a possible search key.
+For example, if we want Mianus or Central's records with value between 2k and 10k, we can find six grid from the grid file and they contains the pointers pointing to the wanted records
+
+
+
 ## Query Processing
 ## Query Optimization 
 ## Physical Database Design
