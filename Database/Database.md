@@ -475,6 +475,33 @@ Splits “grow” tree; root split increases height
 
 [B+ Tree Animation](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html "B+ Tree Animation")
 
+Deleion:
+
+The idea is delete the entry and redistribute the node.
+Delete the entry from the leaf, burrow from right sibling first, if right sibling has no enough entry to burrow then merge them. The redistribute the node
+
+### Static Hashing
+
+The idea of static hash is to use a hash function h, map each one of the records to one of M buckets. The buckets are a container of the hash index, pointing to the original data.
+
+* is one bucket is already full (collision), we can add overflow buckets to it 
+* a typical hash file is only 70%-80% full to avoid low efficiency caused by overflow buckets
+* hashh index are always secondary index
+* Number of M is fixed so it is not good to dynamic increasing data size
+
+### Dynamic Hashing
+
+
+The idea is when bucket become full, doubling the number of bucket and re-organize the file.
+
+There are some smart way to do cheap re-organization like split the original bucket instead of adding new, for example, use dirrctory to of pointers to buckets.
+
+
+#### Extensible hashing
+[![](https://i.imgur.com/wi2OnHf.png)](https://i.imgur.com/wi2OnHf.png)
+[![](https://i.imgur.com/WuhJnJL.png)](https://i.imgur.com/WuhJnJL.png)
+
+depth mean the last n biary digit of the intergral it stores. when add 4, since 4 is 100 end with 00, we track the 00 pointer in the directory to the first bucket, but we find that it is already full, so we double the size of the directory and the 00 pointer now split into 2 pointers: 000 and 100 with depth 3, and re hash all the number in the origin 00 bucket to new bucket. We haven't change the depth of other bucket because they are not full so as you can see, 001 and 101 stil point to the same bucket.
 
 ## Query Processing
 ## Query Optimization 
