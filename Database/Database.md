@@ -531,6 +531,19 @@ For example, if we want Mianus or Central's records with value between 2k and 10
 
 
 ## Query Processing
+
+### Parsing and translation
+
+* Translate the SQL query into its internal form - relational algebra (RA)
+* Parser checks syntax and verifies relations
+
+### Evaluation
+
+* The query-execution engine takes a query-evaluation plan, executes that plan, and returns the answers to the query
+* Need statistical data to optimize
+
+![](https://i.imgur.com/O0g6Q4v.png)
+
 ## Query Optimization 
 ## Physical Database Design
 ## Transactions
