@@ -545,6 +545,9 @@ For example, if we want Mianus or Central's records with value between 2k and 10
 ![](https://i.imgur.com/O0g6Q4v.png)
 
 ## Query Optimization 
+
+[![](https://i.imgur.com/U5VPw6Q.png)](http://naotu.baidu.com/file/49f3797b5f4a25cc4a2c905e0665f520?token=36dadc3ca63a907d)
+
 ## Physical Database Design
 ## Transactions
 ## Concurrency Control Protocols
