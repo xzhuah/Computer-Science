@@ -548,8 +548,11 @@ For example, if we want Mianus or Central's records with value between 2k and 10
 
 [![](https://i.imgur.com/U5VPw6Q.png)](http://naotu.baidu.com/file/49f3797b5f4a25cc4a2c905e0665f520?token=36dadc3ca63a907d)
 
-## Physical Database Design
+
 ## Transactions
+
+[![](https://i.imgur.com/ExTj5mV.png)](http://naotu.baidu.com/file/01767ed3f71bbc90f062be81a1481d1d?token=508d9ab5209ccbea)
+
 ## Concurrency Control Protocols
 ## Database Recovery 
 
