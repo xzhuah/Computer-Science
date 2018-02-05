@@ -554,7 +554,12 @@ For example, if we want Mianus or Central's records with value between 2k and 10
 [![](https://i.imgur.com/ExTj5mV.png)](http://naotu.baidu.com/file/01767ed3f71bbc90f062be81a1481d1d?token=508d9ab5209ccbea)
 
 ## Concurrency Control Protocols
+
+[![](https://i.imgur.com/UsASxjj.png)](http://naotu.baidu.com/file/0091bc3e1daeb90542855e841b4ddfeb?token=c6f02e88639c5c06)
+
 ## Database Recovery 
+
+[![](https://i.imgur.com/6qM9D8e.png)](http://naotu.baidu.com/file/6cd1198c20529e3c3436d94adffa6f5c?token=ad297523e18db3dd)
 
 ##Other learning Resource:
 
