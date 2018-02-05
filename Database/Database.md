@@ -561,7 +561,7 @@ For example, if we want Mianus or Central's records with value between 2k and 10
 
 [![](https://i.imgur.com/6qM9D8e.png)](http://naotu.baidu.com/file/6cd1198c20529e3c3436d94adffa6f5c?token=ad297523e18db3dd)
 
-##Other learning Resource:
+## Other learning Resource:
 
 There is a Chinese passage [here](http://blog.jobbole.com/100349/) which is a very good summary for techniques in relational database. Hope you enjoy it.
 
