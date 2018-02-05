@@ -1,1 +1,1 @@
-README
+This topic is finished on 2018/2/5, please read through database.md
