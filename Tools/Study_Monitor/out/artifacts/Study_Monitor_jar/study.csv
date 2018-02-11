@@ -145,3 +145,19 @@
 1517719754674!#!!#!0
 1517764583414!#!!#!1
 1517820919059!#!!#!0
+1517852763016!#!!#!1
+1517899457342!#!!#!0
+1517917781935!#!!#!1
+1517917872157!#!!#!0
+1517939614345!#!!#!1
+1517989215576!#!!#!0
+1517995134013!#!!#!0
+1518018423350!#!!#!1
+1518087729392!#!!#!0
+1518159656119!#!!#!0
+1518201579197!#!!#!1
+1518246926008!#!!#!0
+1518253772374!#!So a pixel bar chart should be constructed like this:<div><div>Example: <div><customer,<div>month,      		-> bar<div>dollar amount ,		->Y<div>number of visits,	->X<div>dollar amount >	-> color<div><div>every month, we have some customers visit our shop, some of them bought a lot<div>goods and their dollar amount is high, some of them visit us multiple time so their <div>number of visits is high.<div><div>1 group customers by month<div><div>Jan: 30, Feb: 20, Mar 60<div><div>since we want to fully use our screen space, we make bars with the same height<div>but different width<div><div>For example, we made heigh 10 pixel, then Jan will be 3 in width, Feb will be 2<div>and Mar will be 6<div><div>Now, to fill the bar of Jan, we first select out the 3 customer whose dollar amount <div>is lowest and place them on the first row of bar Jan, odered them by number of visits<div>then, we choose 3 lowest from the remaining, place them on the second row orderd<div>by number of visit, so on and so far.<div><div>When we filled all the bars, we color each pixel by their dollar amount, pay attention <div>that, although the Y direction is for dollar amount, the customer on the same row<div>may have totally different dollar amount, that is why we need color to distinguish them.<div><div><div>the pith of pixel bar chart lays in the choose of bar divining attribute and Y-ordering attribute<div><div>The X-ordering attribute, although make sense, can reveal insights clearly since the width of <div>each bar is quite short. What is more, under an ideal situation, the Y-attribute should not<div>change too much by the X-attribute, otherwise, the color attribute should be wasted to <div>hightlight that difference.<div><div>another pith of it lays on the color, the color should be changeable.Different color should <div>reveal different insights of the data set<div><div><div>Now<div><div><div>!#!1
+1518253772900!#!!#!0
+1518285819158!#!!#!1
+1518314814388!#!!#!0
