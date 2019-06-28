@@ -196,11 +196,11 @@ Writing SQL for complex query is not an easy task. Need more practice.
 ### Create Table Example
 	
 	CREATE TABLE Students
-	( 	sid: CHAR(20),
-		name: CHAR(20),
-		login: CHAR(10),
-		age: INT,
-		gpa: REAL
+	( 	sid CHAR(20),
+		name CHAR(20),
+		login CHAR(10),
+		age INT,
+		gpa REAL
 	)
 
 
